@@ -34,7 +34,7 @@ body{
   position: absolute;
   color: #ccc;
   text-align: center;
-  top: 23%;
+  top: 15%;
   width: 100%;
   /* line-height: 0.4em; */
 }
@@ -50,17 +50,26 @@ body{
   font-family: 'Noto Sans HK', sans-serif;
   font-size: 20px;
   opacity: 0.6;
-  padding: 0px 200px;
+  padding: 0px 220px;
   line-height: 2em;
   margin-bottom: 50px;
+}
+
+.teks p a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  opacity: 1;
+  display: inline-block;
 }
 
 .teks a{
   text-decoration: none;
   color: #ccc;
-  font-size: 25px;
-  opacity: 0.8;
+  font-size: 20px;
+  opacity: .8;
   display: inline-block;
+  line-height: 2em;
 }
 
 .cool-link::after{
