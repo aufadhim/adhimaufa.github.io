@@ -140,17 +140,25 @@ body{
   }
   
   .teks p{
-    font-size: 17px;
+    font-size: 16px;
     opacity: 0.6;
     padding:20px 20px;
     
   } 
 
-  .teks a{
-    padding: 20px 20px;
-    font-size: 20px;
+  .teks p a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    opacity: 1;
+    display: inline-block;
   }
 
+
+  .teks a{
+    padding: 10px 10px;
+    font-size: 16px;
+  }
 
 }
 
@@ -252,7 +260,7 @@ section #soc-med{
 
 .social-media .social-icon{
   display: flex;
-  justify-items: center;
+  align-items: center;
   justify-content: center;
 }
 
@@ -265,6 +273,39 @@ section #soc-med{
 
 .social-media .social-icon a img:hover{
   opacity: 1;
+}
+
+@media (max-width: 650px) {
+  .title{
+    font-family: 'Noto Sans HK', sans-serif;
+    color: #ccc;
+    opacity : 0.8;
+    font-size: 25px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 200px;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+
+  .social-media h2{
+    font-family: 'Noto Sans HK', sans-serif;
+    font-size: 23px;
+    color: #ccc;
+    opacity: 0.6;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 3rem;
+  }
+  .social-media .social-icon a img{
+    width: 25px;
+    height: 25px;
+    opacity: 0.7;
+    padding: 15px;
+  }
 }
 
 footer{
