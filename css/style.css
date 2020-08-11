@@ -142,8 +142,9 @@ body{
   .teks p{
     font-size: 16px;
     opacity: 0.6;
-    padding:20px 20px;
-    
+    padding:20px 10px;
+    margin-bottom: 0;
+    padding-bottom: 0;
   } 
 
   .teks p a{
