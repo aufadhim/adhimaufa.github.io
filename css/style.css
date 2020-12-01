@@ -1,3 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+
+/*scroll bar*/
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8; 
+}
+
 html{
   scroll-behavior: smooth;
 }
@@ -32,30 +57,34 @@ body{
 
 .teks{
   position: absolute;
-  color: #ccc;
+  color: rgb(220, 220, 220);
   text-align: center;
-  top: 15%;
+  top: 10%;
   width: 100%;
   /* line-height: 0.4em; */
 }
 
 .teks h1{
-  font-family: 'Noto Sans HK', sans-serif;
-  font-size: 50px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  font-size: 60px;
   opacity: 0.8;
   margin-bottom: 0;
 }
 
 .teks p{
-  font-family: 'Noto Sans HK', sans-serif;
-  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+  font-size: 25px;
   opacity: 0.6;
-  padding: 0px 220px;
+  padding: 0px 150px;
   line-height: 2em;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .teks p a{
+  /* font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold; */
   text-decoration: none;
   color: #fff;
   font-size: 20px;
@@ -197,7 +226,8 @@ section #portfolio{
 }
 
 .title{
-  font-family: 'Noto Sans HK', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
   color: #ccc;
   opacity : 0.8;
   font-size: 30px;
@@ -208,6 +238,51 @@ section #portfolio{
   margin-bottom: 0;
   padding: 0;
 }
+
+.button-top{
+  margin: 20px 10px;
+  background-color: transparent;
+  height: 45px;
+  border: 1px solid #0b0b0b;    
+  color: #000000;
+  padding: 0 20px;
+  cursor: pointer;
+  /* color: beige; */
+  font-size: 17px;
+  border-radius: 3px;
+}
+
+.button-top span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  /* transition: 0.2s; */
+}
+
+.button-top span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  /* transition: 0.5s; */
+}
+
+.button-top:hover span {
+  padding-right: 25px;
+}
+
+.button-top:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button-top:hover{
+  background-color: #020202;
+  transition: .5s;
+  color: beige;
+}
+
 
 .swiper-container {
   width: 100%;
@@ -233,6 +308,63 @@ section #portfolio{
   height: 300px;
   border-radius: 1px;
 }
+
+.swiper-slide .produk{
+  position: relative;
+  margin: 20px;
+  box-shadow: 3px 8px .8rem rgba(0, 0, 0, 0.5);
+  /* padding: 1rem; */
+  background-color: beige;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide .produk img{
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide .produk p{
+  font-weight: bold;
+}
+
+.image-overlay {
+  opacity: 1;
+  display: block;
+  width: 250px;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.swiper-slide .produk .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.swiper-slide .produk:hover .image-overlay {
+  opacity: 0.3;
+}
+
+.swiper-slide .produk:hover .middle {
+  opacity: 1;
+}
+
+.swiper-slide .produk p{
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #121212;
+  padding: 10px 10px;
+}
+
+
+
 
 section #soc-med{
   min-height: 50vh;

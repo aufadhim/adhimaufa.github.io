@@ -28,8 +28,8 @@ particlesJS('particles-js',
       "shape": {
         "type": "star",
         "stroke": {
-          "width": 0,
-          "color": "#000000"
+          "width": 0.1,
+          "color": "#FFFFFF"
         },
         "polygon": {
           "nb_sides": 5
@@ -45,7 +45,7 @@ particlesJS('particles-js',
         "random": false,
         "anim": {
           "enable": false,
-          "speed": 1,
+          "speed": 2,
           "opacity_min": 0.1,
           "sync": false
         }
