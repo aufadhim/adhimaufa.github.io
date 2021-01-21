@@ -153,6 +153,8 @@ body{
   border-radius: 50px;
 }
 
+
+
 @media (max-width: 650px) {
   .teks{
     text-align: left;
@@ -223,6 +225,8 @@ body{
 
 section #portfolio{
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .title{
@@ -235,109 +239,42 @@ section #portfolio{
   align-content: center;
   justify-content: center;
   margin-top: 200px;
-  margin-bottom: 0;
+  margin-bottom: 30px;
   padding: 0;
 }
 
-.button-top{
-  margin: 20px 10px;
-  background-color: transparent;
-  height: 45px;
-  border: 1px solid #0b0b0b;    
-  color: #000000;
-  padding: 0 20px;
-  cursor: pointer;
-  /* color: beige; */
-  font-size: 17px;
-  border-radius: 3px;
-}
-
-.button-top span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  /* transition: 0.2s; */
-}
-
-.button-top span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  /* transition: 0.5s; */
-}
-
-.button-top:hover span {
-  padding-right: 25px;
-}
-
-.button-top:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-.button-top:hover{
-  background-color: #020202;
-  transition: .5s;
-  color: beige;
-}
-
-
-.swiper-container {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 200px;
-  /* min-height: 50vh; */
+.portfolio-container{
+  max-width: 85%;
+  margin: auto;
+  display: -ms-flexbox; /* IE10 */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
 }
 
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-  /* background:#130e0e ; */
-  -webkit-box-reflect: below 3px linear-gradient(transparent,transparent,#0006);
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 0 10px 10px;
 }
 
-.swiper-slide img{
-  width: 300px;
-  height: 300px;
-  border-radius: 1px;
-}
-
-.swiper-slide .produk{
+.image-overlay{
   position: relative;
-  margin: 20px;
-  box-shadow: 3px 8px .8rem rgba(0, 0, 0, 0.5);
-  /* padding: 1rem; */
-  background-color: beige;
-  width: 300px;
-  height: 300px;
+  width: 32.4%;
+  margin-right: 10px;
 }
 
-.swiper-slide .produk img{
-  width: 300px;
-  height: 300px;
-}
-
-.swiper-slide .produk p{
-  font-weight: bold;
-}
-
-.image-overlay {
+.image {
   opacity: 1;
   display: block;
-  width: 250px;
+  width: 100%;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
 }
 
-.swiper-slide .produk .middle {
+.middle {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -346,25 +283,59 @@ section #portfolio{
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.swiper-slide .produk:hover .image-overlay {
-  opacity: 0.3;
+.image-overlay:hover .image {
+  opacity: 0.1;
 }
 
-.swiper-slide .produk:hover .middle {
+.image-overlay:hover .middle {
   opacity: 1;
 }
 
-.swiper-slide .produk p{
-  text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
-  color: #121212;
-  padding: 10px 10px;
+.text {
+  color: white;
+  font-size: 16px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
+.button{
+  display: flex;
+  justify-content: center;
+}
 
+.button a{
+  width: 100px;
+  border: solid 1px white;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  text-decoration: none;
+  margin: 10px;
+}
 
+.button a:hover{
+  background-color: white;
+  color: black;
+}
+
+@media(max-width : 768px){
+  .row{
+    flex-direction: column;
+    padding: 0;
+  }
+  
+  .image-overlay{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 
 section #soc-med{
   min-height: 50vh;
